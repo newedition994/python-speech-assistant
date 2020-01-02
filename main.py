@@ -27,6 +27,9 @@ def respond(voice_data):
         print(ctime())
     if 'search' in voice_data:
         search = record_audio('What do you want search')
+        url = 'http://google.com/search?q=' + search
+        webbrowser.get().open(url)
+        print('Here is what I found for ' + search)
 
 
 print('How can I help you?')

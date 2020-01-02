@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from time import ctime
 import webbrowser
+import time
 
 r = sr.Recognizer()
 
@@ -37,7 +38,8 @@ def respond(voice_data):
         print('Here is what I found for ' + location)
 
 
+time.sleep(1)
 print('How can I help you?')
-voice_data = record_audio()
-print(voice_data)
-respond(voice_data)
+while 1:
+    voice_data = record_audio()
+    respond(voice_data)

@@ -7,6 +7,8 @@ import os
 import random
 from gtts import gTTS
 
+# some issues with pyaudio for the speech recognition but should work
+
 r = sr.Recognizer()
 
 
